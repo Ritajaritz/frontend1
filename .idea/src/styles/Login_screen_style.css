@@ -1,0 +1,150 @@
+@media (min-width: 1025px){
+    .section:first-child {
+        border-radius: 30px 30px 0 0;
+        background-color: rgba(77, 88, 85, 0.5)
+    }
+    .section:last-child {
+        border-radius:  0 0 30px 30px;
+        background-color: rgba(102, 51, 153,0.5);
+    }
+
+    #errorMessage{
+        position: absolute;
+        right: 7.5%;
+        top: 42px;
+        padding: 5px;
+        border: 1px solid red;
+        background-color: rgba(255, 230, 230, 0.55);
+        color: red;
+        border-radius: 0 10px 10px 10px;
+        width: 200px;
+        font-size: 13px;
+    }
+}
+
+
+@media (min-width: 1px) and (max-width: 1024px) {
+    .section:first-child {
+        padding-top: 60px;
+        background-color: rgba(127, 255, 212,0.5);
+    }
+    .section:last-child {
+        background-color: rgba(102, 51, 153,0.5);
+    }
+}
+
+.section {
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(100, 149, 237, 0.27);
+    overflow: hidden;
+}
+
+.section.active {
+    transition: height 0.5s ease-in-out;
+    height: 76%;
+    flex-grow: 1;
+    cursor: auto;
+}
+
+.section:not(.active) {
+    transition: height 0.5s ease-in-out;
+    height: 6%;
+}
+
+.section p, .section a{
+    user-select: none;
+    font-weight: bold;
+}
+
+.section p {
+    font-size: 21px;
+}
+
+.section a{
+    margin: 20px 40px 5px 30px;
+    display: flex;
+    justify-content: left;
+}
+
+.section button, .modal-content button{
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    width: 35%;
+    height: 7.5%;
+    margin-top: 35px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: scale 0.3s ease-in-out;
+}
+
+.section button:hover, .modal-content button:hover {
+    scale: 1.05;
+}
+
+.section input ,.modal-content input{
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 20px;
+    height: 40px;
+    outline: none;
+    border: none;
+    width: 80%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.78);
+}
+
+#input_container{
+    position: relative;
+}
+
+#errorMessage{
+    color: #ff3e3e;
+    font-size: 14px;
+}
+
+#buttons{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.sign_with{
+    margin-top: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(236, 236, 236, 0.67);
+    transition: background-color ,scale 0.3s ease-in-out;
+}
+.sign_with:hover{
+    background-color: rgba(213, 213, 213, 0.67);
+    scale: 1.03;
+}
+
+#google_login{
+    background-image: url("../assets/google_icon.png");
+}
+#apple_login{
+    background-image: url("../assets/apple_icon.png");
+}
+
+#error{
+    color: red;
+}
+#good{
+    color: green;
+}
